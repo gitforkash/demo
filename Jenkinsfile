@@ -1,12 +1,12 @@
 pipeline {
   agent any
   
-  tools{
+  tools {
     maven 'M3'
   }
   stages {
-    stage ('Checkout'){
-      steps{
+    stage('Checkout'){
+      steps {
         git 'https://github.com/gitforkash/demo.git'
         sh 'echo "Checking out from SCM"'
       }
