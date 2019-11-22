@@ -11,10 +11,22 @@ pipeline {
         sh 'echo "Checking out from SCM"'
       }
     }
-    stage ('Build'){
+    stage ('Compile'){
       steps{
-        sh 'echo "Building this thing,, !"'
-        sh 'mvn build'
+        sh 'echo "Compiling this thing,, !"'
+        sh 'mvn compile'
+      }
+    }
+    stage ('Test'){
+      steps{
+        sh 'echo "Testing this thing,, !"'
+        sh 'mvn test'
+      }
+    }
+    stage ('Package'){
+      steps{
+        sh 'echo "packaging this thing,, !"'
+        sh 'mvn package'
       }
     }
   }
