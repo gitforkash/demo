@@ -7,12 +7,12 @@ pipeline {
   stages {
     stage('Checkout'){
       steps {
-        step("Step1") {
+        step {
           git 'https://github.com/gitforkash/demo.git'
           sh 'echo "Checking out from SCM"'
         }
         
-        step ("Step 2") {
+        step {
           sh 'echo "This is another step named 2'
         }
       }
